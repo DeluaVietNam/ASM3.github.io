@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(76, 77, 77, 0.6);
+}
+
+/* 0. LAYOUT */
+.total-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+/* 1. GOALS */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 10px;
+  padding: 0 15px 15px;
+  border-bottom: 1px solid rgba(77, 76, 76, 0.3);
+}
+
+.content i {
+  font-size: 25px;
+}
+
+.content p,
+.content h3 {
+  margin: 0;
+}
+
+/* 2. TEAM */
+
+#team .content {
+  border-bottom: none;
+}
+
+/* 3. TIME LINE */
+#timeline {
+  grid-area: 1/3/-1/4;
+}
+
+#timeline .content {
+  margin-bottom: 30px;
+}
+
+.circle {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: grey;
+
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 4. SCOPES */
+#scopes .content {
+  border-bottom: none;
+}
+
+#scopes h3 {
+  margin-bottom: 20px;
+}
+
+#scopes p {
+  margin-bottom: 10px;
+}
+
+/* 5. HIỂN THỊ TABLET & UNDER */
+@media screen and (max-width: 768px) {
+  .total-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+}
+
+/* 6. HIỂN THỊ MOBILE */
+@media screen and (max-width: 500px) {
+  .total-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+}

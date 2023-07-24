@@ -1,0 +1,497 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* section > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+
+  padding: 30px 50px;
+}
+
+#nav-bar {
+  text-align: center;
+} */
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ___________________________________1. XÂY DỰNG ẢNH BANNER_________________________________  */
+.banner {
+  background-image: linear-gradient(
+      rgba(35, 35, 35, 0.5),
+      rgba(55, 55, 55, 0.5)
+    ),
+    url(../images/banner.jpg);
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+#banner h1 {
+  font-size: 44px;
+}
+
+/* ____________________________________2. XÂY DỰNG NAVBAR_________________________________________  */
+/* THIẾT LẬP LAYOUT CHO NAV */
+.nav-bar .d-flex {
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-link {
+  padding: 0;
+  flex-basis: 200px;
+  align-self: stretch;
+  border-left: 0.1px solid #9e71712e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* .nav-link:nth-child(3) {
+  flex-basis: 350px;
+  flex-direction: column;
+} */
+
+.nav-link:last-child {
+  border-right: 0.1px solid #9e71712e;
+}
+
+i {
+  color: #228be6;
+}
+
+/* ĐIỀU CHỈNH LINK VISITED HOVER ACTIVE  */
+.nav-link:link,
+.nav-link:visited {
+  color: #343a40;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background-color: #f8f9fa;
+}
+
+.nav-link:nth-child(3):link,
+.nav-link:nth-child(3):visited {
+  color: #343a40;
+}
+
+/* ____________________________________3. XÂY DỰNG THÔNG TIN CÁ NHÂN_______________________________  */
+/* THIẾT LẬP STYLE  */
+#personal-info {
+  background-color: #f1f1f1;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.mt-40 {
+  padding: 0;
+  list-style-type: none;
+  line-height: 1.8;
+}
+
+.mt-40 span {
+  font-weight: 600;
+}
+
+/* ĐIỀU CHỈNH LINK VISITED HOVER ACTIVE  */
+.icon i:hover,
+.icon i:active {
+  color: #000;
+}
+
+/* ____________________________________4. XÂY DỰNG THÔNG TIN NGHỀ NGHIỆP______________________________  */
+/* THIẾT LẬP LAYOUT CHO THÔNG TIN NGHỀ NGHIỆP */
+
+.job-la {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.job-info {
+  padding: 15px 10px 5px 10px;
+
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 50px auto;
+  row-gap: 15px;
+}
+
+.job-info {
+  border: 2px solid rgba(52, 58, 64, 0.2);
+}
+
+.sum-info {
+  grid-column: 1/-1;
+  padding-left: 25px;
+}
+
+.job-info h1 {
+  text-transform: capitalize;
+}
+
+.job-info i {
+  justify-self: center;
+  font-size: 40px;
+  color: rgba(105, 59, 117, 0.7);
+}
+
+.detail-info p {
+  font-style: italic;
+}
+
+/* THIẾT LẬP KIỂU CHỮ + MÀU*/
+
+.job-info ul {
+  list-style-type: "- ";
+  list-style-position: inside;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.detail-info h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.detail-info {
+  margin-bottom: 40px;
+
+  position: relative;
+}
+
+.detail-info:last-child {
+  margin-bottom: 0px;
+}
+
+/* THÊM NÚT TRƯỚC VĂN BẢN */
+.detail-info h2::before {
+  content: "";
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: #228be6;
+
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  z-index: 1;
+}
+
+.detail-info span {
+  background-color: #228be6;
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* ____________________________________5. XÂY DỰNG SỞ THÍCH________________________________  */
+
+/* THIẾT LẬP LAYOUT CHO PHẦN SỞ THÍCH */
+.skill-info {
+  grid-column: 1/-1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-right: 40px; */
+}
+
+.detail-skill {
+  align-self: flex-start;
+  flex-basis: 80px;
+}
+
+/* THIẾT LẬP KIỂU CHỮ + MÀU + ICON BÊN TRONG HÌNH TRÒN*/
+.detail-skill i {
+  font-size: 20px;
+  color: #228be6;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.detail-skill div {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #228be6;
+  border-radius: 50%;
+
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+.detail-skill p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ____________________________________6. XÂY DỰNG NGÔN NGỮ + KỸ NĂNG_____________________________  */
+
+.sum-skill {
+  margin-bottom: 20px;
+}
+
+.sum-skill p {
+  font-weight: 600;
+}
+
+/* THIẾT LẬP VẠCH NGANG KỸ NĂNG CÓ MÀU */
+.sum-skill span {
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  background-color: #199cdb;
+  margin-right: 10px;
+}
+
+/* THIẾT LẬP VẠCH NGANG KỸ NĂNG KHÔNG CÓ MÀU */
+.sum-skill .no-color {
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  background-color: #dee2e6;
+  margin-right: 10px;
+}
+
+/* ____________________________________7. XÂY DỰNG CHỨNG CHỈ + GIẢI THƯỞNG________________________  */
+.img {
+  height: 100%;
+  width: 60%;
+}
+
+.total-img {
+  justify-self: stretch;
+  display: flex;
+  gap: 40px;
+}
+
+/* THIẾT LẬP KIỂU CHỮ + MÀU*/
+.content-img h2 {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.content-img ul {
+  list-style-type: "- ";
+  list-style-position: inside;
+}
+
+/* THIẾT LẬP KẺ PHÂN CÁCH GIỮA CÁC CHỨNG CHỈ */
+.total-img:nth-child(2) {
+  border-left: 2px solid #d6c08d;
+}
+
+.certificate {
+  position: relative;
+}
+.certificate::after {
+  content: "";
+  background-color: #d6c08d;
+  height: 1px;
+  width: 95%;
+
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ____________________________________8. XÂY DỰNG PHẦN DỰ ÁN_____________________________  */
+/* THIẾT LẬP LAYOUT */
+.total-project {
+  display: flex;
+  gap: 30px;
+}
+
+.project {
+  border: 1px solid rgba(52, 58, 64, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.cv {
+  height: 60px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  border-top: 1px solid rgba(52, 58, 64, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0 10px;
+  border-top: 1px solid rgba(52, 58, 64, 0.2);
+}
+
+.detail-project {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: center;
+  gap: 20px;
+
+  border-top: 1px solid rgba(52, 58, 64, 0.2);
+  padding: 5px;
+}
+
+#project img {
+  width: 100%;
+}
+
+.detail-project p {
+  margin: 0;
+}
+
+/* TẠO MÀU CHO 2021 */
+.tool p {
+  background-color: #228be6;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.tool i {
+  color: #000;
+}
+
+/* ____________________________________9. XÂY DỰNG PHẦN LIÊN HỆ________________________________  */
+/* THIẾT LẬP LAYOUT CHO PHẦN LIÊN HỆ */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* STYLE CHO ICON  */
+.footer span {
+  background-color: #199cdb;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  position: relative;
+}
+
+.footer i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  font-size: 130%;
+}
+
+/* ĐIỀU CHỈNH LINK VISITED HOVER ACTIVE  */
+.footer a:link,
+.footer a:visited {
+  text-decoration: none;
+  color: #343a40;
+}
+
+.footer a:hover,
+.footer a:active {
+  text-decoration: underline;
+  color: #00a7f5;
+}
+
+.footer i:hover,
+.footer i:active {
+  color: #000;
+}
+
+/* ____________________________________10. BỔ SUNG ẢNH VÀO NAV___________________________________  */
+.nav-bar {
+  position: relative;
+}
+
+.nav1 {
+  flex-basis: 300px;
+}
+
+.nav-link:nth-child(2) {
+  border-right: 0.1px solid #9e71712e;
+}
+
+.nav1 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  height: 150px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ____________________________________11. BỔ SUNG PROJECT CHARSET CHO DỰ ÁN___________________________________  */
+.info-link {
+  text-decoration: none;
+  color: #343a40;
+}
+
+.info-link span {
+  display: none;
+}
+
+.info-link:hover span {
+  color: #ff8c00;
+  display: inline-block;
+}
+
+.info-link:hover {
+  color: #343a40;
+  transform: scale(0.99);
+}

@@ -1,0 +1,73 @@
+@media (max-width: 600px) {
+  /* 0. Banner */
+  #banner h1 {
+    font-size: 40px;
+  }
+
+  /* 1. Navbar */
+  .nav-bar .d-flex {
+    flex-direction: column;
+    height: 150px;
+    padding: 0;
+  }
+
+  .nav-link {
+    justify-content: flex-start;
+    padding-left: 10px;
+    border: none;
+  }
+
+  .nav-link:last-child {
+    border: none;
+  }
+
+  /* 2. PERSONAL INFORMATION */
+  .job-la {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3. CERTIFICATE & AWARDS */
+  .certificate::after {
+    display: none;
+  }
+
+  .total-img {
+    border-bottom: 2px solid #d6c08d;
+  }
+
+  .total-img:nth-child(2) {
+    border-left: none;
+  }
+
+  /* 3. PROJECTS */
+  .total-project {
+    flex-direction: column;
+  }
+
+  .cv {
+    font-size: 18px;
+  }
+
+  .tool {
+    display: flex;
+  }
+
+  /* 4. CONTACT */
+  .footer {
+    gap: 40px;
+  }
+
+  .footer p {
+    display: none;
+  }
+
+  .footer span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer i {
+    font-size: 160%;
+  }
+}
